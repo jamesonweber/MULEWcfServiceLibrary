@@ -17,11 +17,15 @@ namespace MULEWcfServiceLibrary
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
+        [OperationContract]
+        String checkLogin(String username);
+
         // TODO: Add your service operations here
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
     // You can add XSD files into the project. After building the project, you can directly use the data types defined there, with the namespace "MULEWcfServiceLibrary.ContractType".
+
     [DataContract]
     public class CompositeType
     {
