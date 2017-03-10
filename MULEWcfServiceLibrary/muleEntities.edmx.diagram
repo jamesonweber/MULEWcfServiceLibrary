@@ -4,16 +4,16 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="967a72413a0f4f61ab84485de07e2c10" Name="Diagram1">
-        <EntityTypeShape EntityType="muleModel.comment" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="muleModel.group" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+      <Diagram DiagramId="4c4893a6463041b39fee3362c662108c" Name="Diagram1">
+        <EntityTypeShape EntityType="muleModel.comment" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="muleModel.group" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="muleModel.mapping" Width="1.5" PointX="10.5" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="muleModel.positioning" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="muleModel.post" Width="1.5" PointX="6" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="muleModel.post" Width="1.5" PointX="6" PointY="6.25" IsExpanded="true" />
         <EntityTypeShape EntityType="muleModel.sensor" Width="1.5" PointX="8.25" PointY="8.125" IsExpanded="true" />
         <EntityTypeShape EntityType="muleModel.sensor_details" Width="1.5" PointX="10.5" PointY="8.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="muleModel.user_group" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="muleModel.user" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="muleModel.user_group" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="muleModel.user" Width="1.5" PointX="0.75" PointY="6.25" IsExpanded="true" />
         <AssociationConnector Association="muleModel.FK_comments_posts" ManuallyRouted="false" />
         <AssociationConnector Association="muleModel.FK_comments_users" ManuallyRouted="false" />
         <AssociationConnector Association="muleModel.FK_posts_groups" ManuallyRouted="false" />

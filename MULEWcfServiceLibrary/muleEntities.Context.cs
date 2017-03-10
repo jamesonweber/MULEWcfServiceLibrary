@@ -13,10 +13,10 @@ namespace MULEWcfServiceLibrary
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class muleEntities : DbContext
+    public partial class muleEntities1 : DbContext
     {
-        public muleEntities()
-            : base("name=muleEntities")
+        public muleEntities1()
+            : base("name=muleEntities1")
         {
         }
     

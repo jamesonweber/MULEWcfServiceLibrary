@@ -50,7 +50,7 @@
           <Key>
             <PropertyRef Name="post_id" />
           </Key>
-          <Property Name="post_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="post_id" Type="int" Nullable="false" />
           <Property Name="group_id" Type="int" Nullable="false" />
           <Property Name="user_id" Type="int" Nullable="false" />
           <Property Name="post_status" Type="nvarchar" MaxLength="500" />
@@ -62,8 +62,9 @@
           </Key>
           <Property Name="sensor_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="post_id" Type="int" Nullable="false" />
-          <Property Name="avg_primary_data" Type="nvarchar(max)" />
-          <Property Name="sem" Type="nvarchar(max)" />
+          <Property Name="avg_primary_data" Type="float" />
+          <Property Name="sd" Type="float" />
+          <Property Name="sem" Type="float" />
           <Property Name="meta_data" Type="nvarchar(max)" Nullable="false" />
           <Property Name="image" Type="image" />
         </EntityType>
@@ -325,7 +326,7 @@
           <Key>
             <PropertyRef Name="post_id" />
           </Key>
-          <Property Name="post_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="post_id" Type="Int32" Nullable="false" />
           <Property Name="group_id" Type="Int32" Nullable="false" />
           <Property Name="user_id" Type="Int32" Nullable="false" />
           <Property Name="post_status" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
@@ -342,8 +343,9 @@
           </Key>
           <Property Name="sensor_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="post_id" Type="Int32" Nullable="false" />
-          <Property Name="avg_primary_data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="sem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="avg_primary_data" Type="Double" />
+          <Property Name="sd" Type="Double" />
+          <Property Name="sem" Type="Double" />
           <Property Name="meta_data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="image" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="post" Relationship="Self.FK_sensor_posts" FromRole="sensor" ToRole="posts" />
@@ -505,7 +507,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="muleEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="muleEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="comments" EntityType="Self.comment" />
           <EntitySet Name="groups" EntityType="Self.group" />
           <EntitySet Name="mappings" EntityType="Self.mapping" />
@@ -561,7 +563,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="muleModelStoreContainer" CdmEntityContainer="muleEntities">
+        <EntityContainerMapping StorageEntityContainer="muleModelStoreContainer" CdmEntityContainer="muleEntities1">
           <EntitySetMapping Name="comments">
             <EntityTypeMapping TypeName="muleModel.comment">
               <MappingFragment StoreEntitySet="comments">
@@ -624,6 +626,7 @@
                 <ScalarProperty Name="sensor_id" ColumnName="sensor_id" />
                 <ScalarProperty Name="post_id" ColumnName="post_id" />
                 <ScalarProperty Name="avg_primary_data" ColumnName="avg_primary_data" />
+                <ScalarProperty Name="sd" ColumnName="sd" />
                 <ScalarProperty Name="sem" ColumnName="sem" />
                 <ScalarProperty Name="meta_data" ColumnName="meta_data" />
                 <ScalarProperty Name="image" ColumnName="image" />
